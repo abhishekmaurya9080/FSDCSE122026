@@ -49,7 +49,7 @@
 // }
 
 // function loginhandler(username, password, callback){
-//     if(username == "abhishek" && password == "12345"){
+//     if(username == "shivam" && password == "12345"){
 //         callback("Login successful!", null);
 //     }
 //     else{
@@ -58,26 +58,27 @@
 // }
 
 // // loginhandler("shivam", "12345", login);
-// loginhandler("abhishek", "wrongpassword", login);
+// loginhandler("shivam", "wrongpassword", login);
 
-// console.log("One")
+// console.log("one")
 // setTimeout(() => {
-// console.log("Two")
-// },1000)
-// console.log("Three")
+//     console.log("two")
+// }, 10);
+// // console.log("two")
+// console.log("three")
 
-//   setTimeout(() => {
-//     console.log("One");
+// setTimeout(() => {
+//     console.log("one");
 //     setTimeout(() => {
-//         console.log("Two");
+//         console.log("two");
 //         setTimeout(() => {
-//             console.log("Three");
+//             console.log("three");
 //             setTimeout(() => {
-//                 console.log("Four");
+//                 console.log("four");
 //                 setTimeout(() => {
-//                     console.log("Five");
+//                     console.log("five");
 //                     setTimeout(() => {
-//                         console.log("Six");
+//                         console.log("six");
 //                     }, 1000);
 //                 }, 1000);
 //             }, 1000);
@@ -86,79 +87,200 @@
 // }, 1000);
 
 
-// const myPromise = new Promise((resolve, reject) => {
-//     const username = "abhishek";
-//     const password = "123456";
-//     if (username === "abhishek" && password === "123456") {
+// const mypromise = new Promise((resolve, reject) => {
+//     const username = "shivam";
+//     const password = "12345";
+//     if (username === "shivam" && password === "12345") {
 //         resolve("Login successful!");
-//     } else {
+//     }
+//     else {
 //         reject("Invalid username or password.");
 //     }
 // })
 
-// myPromise.then((message) => {
-//         console.log(message);
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//     }).finally(() => {
-//         console.log("All done!");
-//     })
+// mypromise.then((msg) => {
+//     console.log("Success: " + msg);
+// }).catch((error) => {
+//     console.log("Error: " + error);
+// }).finally(() => {
+//     console.log("All done");
+// });
 
 
-// const myPromise = new Promise((resolve, reject) => {
-//     const number = "123456";
+// const mypromise = new Promise((resolve, reject) => {
+//     const number = 4; 
 //     if (number % 2 === 0) {
-//         resolve("Is Even number");
-//     } else {
-//         reject("Is Odd number.");
+//         resolve("even");
+//     }
+//     else {
+//         reject("odd");
 //     }
 // })
 
-// myPromise.then((message) => {
-//         console.log(message);
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//     }).finally(() => {
-//         console.log("All done!");
-//     })
-    
-//   async function handleData() {
-//     try {
+// mypromise.then((msg) => {
+//     console.log("Success: " + msg);
+// }).catch((error) => {
+//     console.log("Error: " + error);
+// }).finally(() => {
+//     console.log("All done");
+// });
+
+// async function handledata(){
+//     try{
 //         console.log("Before promise");
-
 //         const q = await mypromise;
-
 //         console.log(q);
 //     }
-//     catch (err) {
+//     catch(err){
 //         console.log("Error: " + err);
 //     }
-//     finally {
+//     finally{
 //         console.log("All done");
 //     }
 // }
-
-// handleData();
-
+// handledata();
 
 
-const otp = 7670;
-const enteredOtp = 7670; 
+// const mypromise = new Promise((resolve, reject) => {
+//     const username = "shivam";
+//     const password = "12345";   
+//     if (username === "shivam" && password === "12345") {
+//         resolve("Success");
+        
+//     }   
+//     else {
+//         reject("Invalid username or password.");
+//     }
+// })
 
-const orderPromise = new Promise((resolve, reject) => {
-    console.log("Order Received");
+// async function handledata(){
+//     try{
+//         console.log("Before promise");
+//         const q = await mypromise;
+//         console.log(q);
+//     }
+//     catch(err){
+//         console.log("Error: " + err);
+//     }finally{
+//         console.log("All done");
+//     }
+// }
+// handledata();
+// const orderreceive = new Promise((resolve) => {
+//     setTimeout(() => {
+//         resolve("Order received");
+//     }, 1000);
+// });
 
-    setTimeout(() => {
-        if (enteredOtp === otp) {
-            resolve("Order Accepted");
-        } else {
-            reject("Invalid OTP. Order Declined");
-        }
-    }, 2000);
-});
+// async function handledata2(){
+//     try{
+//         const msg = await mypromise;
+//         if(msg == "Success"){
+//             const orderstatus = await orderreceive;
+//             setTimeout(() => {
+//                 console.log("Order received");
+                
+//             }, 1000);
+//         }
+//         console.log(msg);
+//     }
+//     catch(err){
+//         console.log("Error: " + err);
+//     }
+//     finally{
+//         console.log("All done");
+//     }
+// }
+// handledata2();
 
-orderPromise
-    .then(result => console.log(result))
-    .catch(error => console.log(error));
+// function orderreceive(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve("oder recieved");
+//         },1000)
+//     })
+// }
+// function oderprepare(){
+//     return new Promise((prepare)=>{
+//         setTimeout(()=>{
+//             prepare("order prepare");
+//         },1000)
+//     })
+// }
+// function oderdispatch(){
+//     return new Promise((dispatch)=>{
+//         setTimeout(()=>{
+//             dispatch("order dispatch");
+//         },1000)
+//     })
+// }
+// function oderdelivered(){
+//     return new Promise((delivered)=>{
+//         setTimeout(()=>{
+//             delivered("order delivered");
+//         },1000)
+//     })
+// }
+
+//  async function orderhandler(){
+//     try{
+//         const status= await orderreceive();
+//         console.log(status)
+//         const status1=await oderprepare();
+//         console.log(status1)
+//         const status2=await oderdispatch();
+//         console.log(status2)
+//         const status3= await oderdelivered();
+//         console.log(status3)
+//     }catch(e){
+//         console.log(e)
+//     }
+// }
+// // orderreceive().then((msg)=>{
+// //     console.log(msg)
+// // }).catch(()=>{
+// //     console.log(e)
+// // }).finally(()=>{
+// // console.log("All done")
+// // })
+
+// orderhandler();
+const container=document.getElementById('container')
+const button=document.getElementById('btn')
+const loading=document.createElement('div')
+container.appendChild(loading)
+console.log(button)
+ async function fetchdata(){
+    try{
+        loading.innerHTML='<h2>Loading Data...</h2>'
+        const serverData= await fetch('https://fakestoreapi.com/products')
+        const jsonData=await serverData.json()
+        // console.log(serverData)
+        // container.innerHTML=`${JSON.stringify(jsonData)}`  //data get in string form
+        // container.innerHTML = `<pre>${JSON.stringify(jsonData, null, 2)}</pre>`; //get data in jason form
+        // console.log(jsonData)
+          let table=`<table>
+          <tr><td>ITEM_ID</td><tr>TITLE</td><tr>PRICE</td></tr>
+          ${
+            jsonData.map((ele)=>(
+                
+                `<tr>
+                <td>${(}ele.id}</td>
+                <td>${ele.title}</td>
+                <td>${ele.price}</td>
+                </tr>`
+            ))
+          } 
+          </table>`
+    }catch(e){
+        loading.innerHTML='<h2>Loading Error</h2>'
+        
+    }
+    finally{
+       loading.innerHTML='' 
+        
+    }
+
+}
+button.addEventListener('click',fetchdata)
+// fetchdata()
