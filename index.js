@@ -259,19 +259,25 @@ console.log(button)
         // container.innerHTML=`${JSON.stringify(jsonData)}`  //data get in string form
         // container.innerHTML = `<pre>${JSON.stringify(jsonData, null, 2)}</pre>`; //get data in jason form
         // console.log(jsonData)
-          let table=`<table>
-          <tr><td>ITEM_ID</td><tr>TITLE</td><tr>PRICE</td></tr>
+          let table=`<table border='4px>
+          <tr>
+          <td>ITEM_ID</td>
+          <td>TITLE</td>
+          <td>PRICE</td>
+          </tr>
           ${
             jsonData.map((ele)=>(
                 
                 `<tr>
-                <td>${(}ele.id}</td>
+                <td><img src=${ele.image} height="100px" width="100px" alt='Cloth'/></td>
+                <td>${ele.id}</td>
                 <td>${ele.title}</td>
                 <td>${ele.price}</td>
                 </tr>`
             ))
           } 
           </table>`
+          container.innerHTML=table;
     }catch(e){
         loading.innerHTML='<h2>Loading Error</h2>'
         
