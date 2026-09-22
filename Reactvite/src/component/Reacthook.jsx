@@ -1,17 +1,26 @@
-import Reacthook from 'react';
+import React, {useState} from "react";
 
-function Reacthook() {
-    const [counter, setCount] =useState(100);
-    function increaseCountervalue() {
-        // alert('Hiii');
-        setCount(counter + 10);
-    }
-return (
-    <div>
-        <h1 style={{ color: 'blue' }}>Working on React Hooks</h1>
-        <h1> Counter Value: {counter}</h1>
-        <button onClick={increaseCountervalue}>Increase Counter Value</button>
-    </div>
-);
+function ReactHook() {
+const [counter, setCounter] = useState(100);
+
+function IncreaseCounter() {
+// alert((`Hii`));
+setCounter(counter + 10);
 }
-export default Reacthook;
+
+function DecreaseCounter() {
+// alert((`Hii`));
+setCounter(counter - 5);
+}
+
+  return (
+    <div>
+     <h2 style={{color : "red"}}>Working with React Hook</h2>
+     <h1>Counter Value = {counter}</h1>
+     <button onClick = {IncreaseCounter}>Increase Counter</button>
+     <button onClick = {DecreaseCounter}>Decrease Counter</button>
+    </div>
+  );
+}
+
+export default ReactHook;

@@ -1,94 +1,56 @@
 import React from 'react'
-import ICard from './ICard'
+import Icard from './Icard'
 
 function Gallery() {
-    const students = [
-    {
-        pic: "https://i.pravatar.cc/150?img=1",
-        name: "Abhishek",
+    const student = [{
+        pic: 'https://cdn.pixabay.com/photo/2022/12/13/08/42/free-smart-boy-handsome-images-7652808_1280.jpg',
+        name: "Abhishek Maurya",
         roll: "2400320100050",
         branch: "CSE",
-        college: "ABES"
+        College: "ABESEC"
     },
     {
-        pic: "https://i.pravatar.cc/150?img=2",
-        name: "Rahul",
-        roll: "2400320100051",
-        branch: "CSE",
-        college: "ABES"
-    },
-    {
-        pic: "https://i.pravatar.cc/150?img=3",
-        name: "Aman",
-        roll: "2400320100052",
-        branch: "CSE",
-        college: "ABES"
-    },
-    {
-        pic: "https://i.pravatar.cc/150?img=4",
-        name: "Rohit",
-        roll: "2400320100053",
-        branch: "CSE",
-        college: "ABES"
-    },
-    {
-        pic: "https://i.pravatar.cc/150?img=5",
-        name: "Karan",
-        roll: "2400320100054",
-        branch: "CSE",
-        college: "ABES"
-    },
-    {
-        pic: "https://i.pravatar.cc/150?img=6",
-        name: "Vikas",
-        roll: "2400320100055",
-        branch: "CSE",
-        college: "ABES"
-    },
-    {
-        pic: "https://i.pravatar.cc/150?img=7",
-        name: "Arjun",
+        pic: 'https://cdn.pixabay.com/photo/2023/02/17/16/25/man-7796384_1280.jpg',
+        name: "John Doe",
         roll: "2400320100056",
-        branch: "CSE",
-        college: "ABES"
+        branch: "ECE",
+        College: "ABESEC"
     },
     {
-        pic: "https://i.pravatar.cc/150?img=8",
-        name: "Mohit",
+        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSseUBR60TrfFUspDkZEPIi-rnQ9m5d0vq1xEZnpRhnpT8otBnoq_NWJb7Y&s=10',               
+        name: "Jane Smith",
         roll: "2400320100057",
-        branch: "CSE",
-        college: "ABES"
+        branch: "ME",
+        College: "ABESEC"
     },
     {
-        pic: "https://i.pravatar.cc/150?img=9",
-        name: "Sahil",
-        roll: "2400320100058",
-        branch: "CSE",
-        college: "ABES"
-    },
-    {
-        pic: "https://i.pravatar.cc/150?img=10",
-        name: "Nikhil",
-        roll: "2400320100059",
-        branch: "CSE",
-        college: "ABES"
+        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsgVrWI95GtR2SvnFJQSmtgug2_OyWyfDd-flBr_JUJw_0KFZQ_QkW1Ra&s=10',
+        name: "Alice Johnson",  
+      roll: "2400320100058",
+        branch: "CE",
+        College: "ABESEC"
     }
-];
+    ]
   return (
-    <div style={{display:'flex',border:'2px solid red'}}>
-        {/* <ICard name={students.name} roll={students.roll} branch={students.branch} college={students.college}></ICard> */}
-        {/* <ICard name="Shyam" roll="456" branch="CSE" college="ABES"></ICard>
-        <ICard name="Hari" roll="789" branch="CSE" college="ABES"></ICard>
-        <ICard name="Ramesh" roll="101" branch="CSE" college="ABES"></ICard> */}
-        {/* <ICard data={students}></ICard> */}
-         
-         {
-            students.map((ele)=>(
-                <div>
-                    <ICard data={ele}></ICard>
+    <div style={{display: 'flex',border: '1px solid white',padding: '10px',margin: '5px',  }}>
+        {/* <Icard pic='https://cdn.pixabay.com/photo/2022/12/13/08/42/free-smart-boy-handsome-images-7652808_1280.jpg' name="Abhishek Verma" roll="2400320100055" branch="CSE" College="ABESEC"/>
+        <Icard pic='https://cdn.pixabay.com/photo/2023/02/17/16/25/man-7796384_1280.jpg' name="John Doe" roll="2400320100056" branch="ECE" College="ABESEC"/>
+        <Icard pic='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSseUBR60TrfFUspDkZEPIi-rnQ9m5d0vq1xEZnpRhnpT8otBnoq_NWJb7Y&s=10' name="Jane Smith" roll="2400320100057" branch="ME" College="ABESEC"/>
+        <Icard pic='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsgVrWI95GtR2SvnFJQSmtgug2_OyWyfDd-flBr_JUJw_0KFZQ_QkW1Ra&s=10' name="Alice Johnson" roll="2400320100058" branch="CE" College="ABESEC"/>
+       */}
+         {/* <Icard data={student[0]}/>
+            <Icard data={student[1]}/>
+            <Icard data={student[2]}/>
+            <Icard data={student[3]}/> */}
+
+            {
+                student.map((ele) => (
+                    <div>
+                        <Icard data={ele}/>
                     </div>
-            ))
-         }
+                ))
+            }
+
     </div>
   )
 }
