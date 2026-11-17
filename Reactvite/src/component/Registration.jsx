@@ -9,6 +9,7 @@ function Registration(regdata) {
  function registerUser(){
     e.preventDefault();
     regdata(name,email,password);
+    console.log(regdata);
     // alert(name+email+password);
  }
   return (
